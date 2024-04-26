@@ -9,15 +9,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ManagementApplication extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
+import static com.uap.constant.ManagemantContants.MAIN_FRAME;
 
-        var lebel = new Label("Abdullah");
-        Scene scene = new Scene(lebel, 800, 640);
-        stage.setTitle("Tusar!");
-        stage.setScene(scene);
-        stage.show();
+public class ManagementApplication extends Application {
+    private static final String PROJECT_TITLE = "Employee Management System";
+    @Override
+    public void start(Stage mainStage) throws IOException {
+        Scene mainScene = new Scene(new Label(), MAIN_FRAME.getWidth(), MAIN_FRAME.getHeight());
+        mainStage.setTitle(PROJECT_TITLE);
+        mainStage.setScene(mainScene);
+        mainStage.show();
     }
 
     public static void main(String[] args) {
